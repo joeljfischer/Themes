@@ -10,14 +10,14 @@
                     {{#if description}}
                         {{description}}
                     {{else}}
-                        A collection of {{plural ../pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                        A collection of {{plural ../pagination.total empty="0 posts" singular="% post" plural="% posts"}}
                     {{/if}}
                 </div>
             </header>
         </section>
 
         <div class="gh-feed">
-            {{#get "posts" filter="primary_tag:{{slug}}" limit="all"}}
+            {{#get "posts" filter="tag:{{slug}}" limit="all"}}
                 {{#foreach posts}}
                     {{> loop}}
                 {{/foreach}}
