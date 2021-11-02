@@ -1,7 +1,7 @@
 {
     "name": "bulletin",
-    "description": "A Ghost theme",
-    "version": "1.0.0",
+    "description": "A Ghost theme - customized for The Garden Weekly by Joel Fischer",
+    "version": "1.0.1",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
