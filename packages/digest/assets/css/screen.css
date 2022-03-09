@@ -11,6 +11,7 @@
 
 :root {
     --font-sans: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
+    --font-serif: "PT Serif", Times, serif; /* stylelint-disable-line value-keyword-case */
     --h1-size: 4.8rem;
 }
 
@@ -106,7 +107,7 @@ body {
 }
 
 .gh-card-excerpt {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1.5;
     color: var(--color-secondary-text);
 }
@@ -152,6 +153,11 @@ body {
     font-weight: 800;
 }
 
+.has-serif-title .gh-subscribe-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+}
+
 .gh-subscribe-description {
     margin-top: 1.6rem;
     font-size: 1.8rem;
@@ -185,7 +191,7 @@ body {
     height: calc(100% - 16px);
     padding: 0 1.2rem 0 1.6rem;
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.5;
     color: var(--color-white);
     text-transform: uppercase;
@@ -253,12 +259,22 @@ body:not(.home-template) .gh-article-image {
     border-radius: 4px;
 }
 
-.gh-content a:not(.gh-btn) {
-    font-weight: 500;
+.gh-article-image.image-wide img {
+    grid-column: wide-start / wide-end;
+}
+
+.gh-article-image.image-full img {
+    grid-column: full-start / full-end;
+    width: 100%;
+    border-radius: 0;
 }
 
 .gh-article-footer {
     margin-top: 6.4rem;
+}
+
+.no-pagination .gh-article-footer {
+    display: none;
 }
 
 .gh-navigation {
@@ -302,6 +318,11 @@ body:not(.home-template) .gh-article-image {
 .gh-pagehead-title {
     font-size: var(--h1-size);
     font-weight: 800;
+}
+
+.has-serif-title .gh-pagehead-title {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
 }
 
 .gh-pagehead-description {

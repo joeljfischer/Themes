@@ -37,16 +37,14 @@
                 <h2 class="gh-section-title">More issues</h2>
 
                 <div class="gh-feed">
-                    {{#foreach posts}}
-                        {{^is "paged"}}
-                            {{^has index="0"}}
-                                {{> loop}}
-                            {{/has}}
-                        {{else}}
-                            {{> loop}}
-                        {{/is}}
+                    {{#foreach posts from="2"}}
+                        {{> loop}}
                     {{/foreach}}
                 </div>
+
+                {{#match posts.length "=" 1}}
+                    Additional issues will be published soon.
+                {{/match}}
 
                 <button class="gh-loadmore gh-btn">Load more issues</button>
             </section>
@@ -74,7 +72,7 @@
                             {{^if @member}}
                                 <p class="gh-signup-description">Sign up now to get access to the library of members-only issues.</p>
 
-                                <a class="gh-subscribe-input" href="#/portal/signup">
+                                <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
                                     <div class="gh-subscribe-input-text">
                                         {{> icons/email}}
                                         jamie@example.com
@@ -83,7 +81,7 @@
                                 </a>
                             {{else}}
                                 <p class="gh-signup-description">Upgrade to a paid account to get full access.</p>
-                                <a class="gh-signup-btn gh-btn gh-primary-btn" href="#/portal/account/plans">Upgrade now</a>
+                                <a class="gh-signup-btn gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</a>
                             {{/if}}
                         </div>
                     {{/if}}

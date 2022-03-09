@@ -1,5 +1,5 @@
 <article class="gh-article {{post_class}}">
-    <header class="gh-article-header gh-canvas">
+    <header class="gh-article-header gh-canvas{{#match @custom.feature_image_width "Full"}} image-full{{else match @custom.feature_image_width "=" "Wide"}} image-wide{{/match}}">
         <h1 class="gh-article-title">{{title}}</h1>
 
         {{#is "post"}}
@@ -44,7 +44,7 @@
     </div>
 
     {{#is "home, post"}}
-        <footer class="gh-article-footer gh-canvas">
+        <footer class="gh-article-footer gh-canvas{{#prev_post}} has-prev{{/prev_post}}{{#next_post}} has-next{{/next_post}}">
             <nav class="gh-navigation">
                 <div class="gh-navigation-previous">
                     {{#prev_post}}

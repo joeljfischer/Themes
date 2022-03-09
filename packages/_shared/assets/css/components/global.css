@@ -21,7 +21,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:not(.kg-btn):not(.kg-product-card-button):hover {
     opacity: 0.8;
 }
 
@@ -33,7 +33,7 @@ h5,
 h6 {
     line-height: 1.15;
     color: var(--color-darker-gray);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 h1 {
@@ -67,9 +67,8 @@ hr {
     border: 0;
 }
 
-blockquote {
+blockquote:not([class]) {
     padding-left: 2rem;
-    font-style: italic;
     border-left: 4px solid var(--ghost-accent-color);
 }
 
