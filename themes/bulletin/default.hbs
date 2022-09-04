@@ -16,7 +16,7 @@
 
 <body class="{{body_class}} is-head-brand{{^if @member.paid}}{{#is "home"}} is-home-cta{{/is}}{{/if}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
     <div class="gh-site">
-        {{^if @member.paid}}
+        {{^if @member}}
             {{^is "home"}}
                 {{> "header"}}
             {{/is}}
@@ -26,7 +26,7 @@
 
         {{{body}}}
 
-        {{^if @member.paid}}
+        {{^if @member}}
             {{^is "home"}}
                 {{> "footer"}}
             {{/is}}

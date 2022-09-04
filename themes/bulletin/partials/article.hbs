@@ -10,6 +10,8 @@
             {{/if}}
             —
             <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            -
+            {{reading_time minute="1 minute read" minutes="% minute read"}}
         </span>
 
         {{#if custom_excerpt}}
